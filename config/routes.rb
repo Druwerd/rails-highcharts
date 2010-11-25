@@ -1,5 +1,6 @@
 Charts::Application.routes.draw do
   resources :charts
+  match 'rrd_data' => 'charts#rrd_data'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

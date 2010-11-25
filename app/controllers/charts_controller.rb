@@ -9,6 +9,12 @@ class ChartsController < ApplicationController
       format.xml  { render :xml => @charts }
     end
   end
+  
+  def rrd_data
+  	respond_to do |format|
+  	  format.html { render :text => '5'}
+  	end
+  end
 
   # GET /charts/1
   # GET /charts/1.xml
