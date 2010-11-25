@@ -11,8 +11,9 @@ class ChartsController < ApplicationController
   end
   
   def rrd_data
+  	load = Chart.get_rrd_data("/var/lib/collectd/rrd/ubuntu/load/load.rrd")
   	respond_to do |format|
-  	  format.html { render :text => '5'}
+  	  format.html { render :text => load.to_s}
   	end
   end
 
